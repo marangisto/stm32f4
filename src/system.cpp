@@ -85,6 +85,6 @@ extern "C" void system_init(void)
 
     // initialize sys-tick for milli-second counts
 
-    stm32f4::sys_tick_init(60000);
+    stm32f4::sys_tick_init(100000);
 }
 

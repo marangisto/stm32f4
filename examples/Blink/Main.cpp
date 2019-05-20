@@ -34,6 +34,6 @@ void loop()
                 ld6::toggle();
         }
     }
-    sys_tick::delay_ms(100);
+    sys_tick::delay_ms(1000);
 }
 
