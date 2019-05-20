@@ -36,6 +36,7 @@ private:
 struct ISR
 {
     enum POS
+        //                              NVIC.ISER0 = BV(XX)
         { WWDG = 0
         , EXTI16_PVD = 1
         , EXTI21_TAMP_STAMP = 2
@@ -64,6 +65,7 @@ struct ISR
         , TIM3 = 29
         , TIM4 = 30
         , I2C1_EV = 31
+        //                              NVIC.ISER1 = BV(XX-64)
         , I2C1_ER = 32
         , I2C2_EV = 33
         , I2C2_ER = 34
@@ -83,6 +85,7 @@ struct ISR
         , DMA2_Stream2 = 58
         , DMA2_Stream3 = 59
         , DMA2_Stream4 = 60
+        //                              NVIC.ISER2 = BV(XX-64)
         , OTG_FS = 67
         , DMA2_Stream5 = 68
         , DMA2_Stream6 = 69
