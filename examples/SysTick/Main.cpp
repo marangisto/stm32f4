@@ -12,6 +12,8 @@ int main()
 {
     led_a::setup();
     led_b::setup();
+    led_c::setup();
+    led_d::setup();
 
     for (;;)
     {
