@@ -17,7 +17,7 @@ template<> struct timer_traits<1>
     typedef tim1_t T;
     static inline T& TIM() { return TIM1; }
     static inline void rcc_enable() { RCC.APB2ENR |= BV(rcc_t::APB2ENR_TIM1EN); }
-    static inline void nvic_enable() { NVIC.ISER0 |= BV(ISR::TIM1_BRK_TIM9); }
+    static inline void nvic_enable() { NVIC.ISER0 |= BV(ISR::TIM1_UP_TIM10); }
 };
 
 template<> struct timer_traits<2>

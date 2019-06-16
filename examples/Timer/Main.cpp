@@ -5,13 +5,13 @@ using namespace stm32f4;
 using namespace timer;
 using namespace gpio;
 
-typedef timer_t<11> tim_a;
+typedef timer_t<1> tim_a;
 typedef timer_t<5> tim_b;
 
 typedef output_t<PD13> led_a;
 typedef output_t<PD12> led_b;
 
-extern "C" void ISR_TIM1_TRG_COM_TIM11(void)
+extern "C" void ISR_TIM1_UP_TIM10(void)
 {
     tim_a::clear_uif();
     led_a::toggle();
@@ -20,7 +20,7 @@ extern "C" void ISR_TIM1_TRG_COM_TIM11(void)
 extern "C" void ISR_TIM5(void)
 {
     tim_b::clear_uif();
-    led_b::write(!led_a::read());
+    led_b::toggle();
 }
 
 int main()
